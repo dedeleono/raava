@@ -28,7 +28,7 @@ const Contact = () => {
               animate={{ y: 0 }}
               initial={{ y: "100%" }}
               transition={{ delay: 0.5, duration: 0.5 }}
-              className="text-6xl text-center lg:text-right lg:text-8xl "
+              className="text-4xl text-center lg:text-right lg:text-6xl tracking-wide"
               style={{ textShadow: "0.5px 0.5px 0.1px #121618" }}
             >
               Let us hear your ideas.
@@ -49,14 +49,14 @@ const Contact = () => {
                   get in touch
                 </m.h2>
               </div>
-              <div className=" overflow-hidden font-Roboto font-normal">
+              <div className=" overflow-hidden font-Roboto font-light">
                 <m.h2 variants={item}>Talk with us</m.h2>
               </div>
             </m.div>
             
           </div>
         </main>
-        <div className="min-h-full mt-10 w-full flex items-center justify-center">
+        <div className="min-h-full md:mt-10 mt-6 w-full flex items-center justify-center">
           <form className="w-full max-w-lg">
             <div className="flex flex-wrap -mx-3 mb-6">
               <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">

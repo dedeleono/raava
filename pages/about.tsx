@@ -18,7 +18,7 @@ const About = () => {
         className="text-gray-900 absolute top-0 left-0 w-full h-full lg:px-48 px-16 bg-cover bg-left"
         style={{backgroundImage:`url("${img9.src}")`}}
       >
-        <div className="absolute w-full min-h-full bg-black/40 left-0 z-[-1]"/>
+        <div className="absolute w-full min-h-full bg-black/30 left-0 z-[-1]"/>
         <main>
           <div className="my-96 p-1 overflow-hidden font-Montserrat font-thin text-white italic">
             <m.h1
@@ -41,7 +41,7 @@ const About = () => {
             <div className=" overflow-hidden">
               <m.h2 className="text-xs font-Montserrat font-thin" variants={item}>why we do what we do?</m.h2>
             </div>
-            <div className=" overflow-hidden font-Roboto font-normal">
+            <div className=" overflow-hidden font-Roboto font-light">
               <m.h2 variants={item}>Who we are?</m.h2>
             </div>
           </m.div>

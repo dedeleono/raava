@@ -25,7 +25,7 @@ const Collections = () => {
               animate={{ y: 0 }}
               initial={{ y: "100%" }}
               transition={{ delay: 0.5, duration: 0.5 }}
-              className="text-6xl text-center lg:text-right lg:text-8xl "
+              className="text-4xl text-center lg:text-right lg:text-6xl tracking-wide"
               style={{textShadow: '0.5px 0.5px 0.1px #121618'}}
             >
               Hand - Crafted Desgins
@@ -39,9 +39,9 @@ const Collections = () => {
             className="font-latoBold text-left lg:text-6xl text-2xl"
           >
             <div className=" overflow-hidden">
-              <m.h2 className="text-sm font-Montserrat font-thin" variants={item}>made in</m.h2>
+              <m.h2 className="text-xs font-Montserrat font-thin" variants={item}>made in</m.h2>
             </div>
-            <div className=" overflow-hidden font-Roboto font-normal">
+            <div className=" overflow-hidden font-Roboto font-light">
               <m.h2 variants={item}>Guatemala</m.h2>
             </div>
           </m.div>

@@ -21,7 +21,7 @@ export default function Home() {
             animate={{ y: 0 }}
             initial={{ y: "100%" }}
             transition={{ delay: 0.5, duration: 0.5 }}
-            className="text-6xl text-center lg:text-right lg:text-8xl italic"
+            className="text-4xl text-center lg:text-right lg:text-6xl italic tracking-wide"
             style={{textShadow: '0.5px 0.5px 0.1px #121618'}}
           >
             Style & Comfort
