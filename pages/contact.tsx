@@ -22,7 +22,7 @@ const Contact = () => {
           transition={{ delay: 0.5, duration: 0.5 }}
           className="lg:text-9xl text-6xl lg:text-right text-center"
         >
-          Let's Talk
+          Let&apos;s Talk
         </m.h1>
       </div>
       <div className="flex gap-40">
