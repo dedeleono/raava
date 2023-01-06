@@ -7,7 +7,7 @@ const Contact = () => {
     <>
       <m.div
         animate={{ y: "0%" }}
-        exit={{ opacity: 1 }}
+        exit={{ opacity: 0.1 }}
         initial={{ y: "100%" }}
         transition={{
           duration: 0.75,
@@ -16,17 +16,18 @@ const Contact = () => {
         className="text-gray-900 absolute top-0 left-0 w-full h-full bg-red-400 lg:px-48 px-16"
       >
         <main>
-          <div className="my-96 p-1 font-archivo overflow-hidden ">
+          <div className="my-96 p-1 overflow-hidden font-Montserrat font-thin text-white/80">
             <m.h1
               animate={{ y: 0 }}
               initial={{ y: "100%" }}
               transition={{ delay: 0.5, duration: 0.5 }}
-              className="text-6xl text-center lg:text-right lg:text-9xl "
+              className="text-6xl text-center lg:text-right lg:text-8xl "
+              style={{ textShadow: "1px 1px 0.5px #121618" }}
             >
-              Happy Pickle
+              Let us hear your ideas.
             </m.h1>
           </div>
-          <div className="flex justify-between">
+          <div className="flex flex-col md:flex-row justify-between">
             <m.div
               variants={container}
               initial="hidden"
@@ -34,20 +35,22 @@ const Contact = () => {
               className="font-latoBold text-left lg:text-6xl text-2xl"
             >
               <div className=" overflow-hidden">
-                <m.h2 variants={item}>Design</m.h2>
+                <m.h2
+                  className="text-xs font-Montserrat font-thin"
+                  variants={item}
+                >
+                  get in touch
+                </m.h2>
               </div>
-              <div className=" overflow-hidden">
-                <m.h2 variants={item}>Company</m.h2>
-              </div>
-              <div className=" overflow-hidden">
-                <m.h2 variants={item}>hasjhfjhsaf</m.h2>
+              <div className=" overflow-hidden font-Roboto font-normal">
+                <m.h2 variants={item}>Talk with us</m.h2>
               </div>
             </m.div>
             <m.div
               variants={container}
               initial="hidden"
               animate="show"
-              className="text-right lg:text-2xl text-base"
+              className="text-right lg:text-2xl text-base md:m-0 mt-10"
             >
               <div className="overflow-hidden py-1">
                 <m.h3 variants={item}>This pickle gonna make you smile.</m.h3>

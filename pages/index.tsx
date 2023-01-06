@@ -1,6 +1,6 @@
 import { motion as m } from "framer-motion";
 import { container, item } from "../utilities/animation";
-import img9 from '../public/imgs/image-01.jpg'
+import img9 from '../public/imgs/img-0001.png'
 
 export default function Home() {
   const d = new Date();
@@ -20,12 +20,13 @@ export default function Home() {
             animate={{ y: 0 }}
             initial={{ y: "100%" }}
             transition={{ delay: 0.5, duration: 0.5 }}
-            className="text-6xl text-center lg:text-left lg:text-8xl "
+            className="text-6xl text-center lg:text-right lg:text-8xl"
+            style={{textShadow: '1px 1px 0.5px #121618'}}
           >
             Style & Comfort
           </m.h1>
         </div>
-        <div className="flex justify-between">
+        <div className="flex flex-col md:flex-row justify-between">
           <m.div
             variants={container}
             initial="hidden"
@@ -33,20 +34,17 @@ export default function Home() {
             className="font-latoBold text-left lg:text-6xl text-2xl"
           >
             <div className=" overflow-hidden">
-              <m.h2 variants={item}>Design</m.h2>
+              <m.h2 className="text-xs font-Montserrat font-thin" variants={item}>more than a</m.h2>
             </div>
-            <div className=" overflow-hidden">
-              <m.h2 variants={item}>Company</m.h2>
-            </div>
-            <div className=" overflow-hidden">
-              <m.h2 variants={item}>{d.getFullYear()}</m.h2>
+            <div className=" overflow-hidden font-Roboto font-normal">
+              <m.h2 variants={item}>Furniture Company</m.h2>
             </div>
           </m.div>
           <m.div
             variants={container}
             initial="hidden"
             animate="show"
-            className="text-right lg:text-2xl text-base"
+            className="text-right lg:text-2xl text-base md:m-0 mt-10"
           >
             <div className="overflow-hidden py-1">
               <m.h3 variants={item}>This pickle gonna make you smile.</m.h3>
