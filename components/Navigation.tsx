@@ -66,17 +66,17 @@ const Navigation = ({ activeId }:{activeId:string}) => {
       <Link href="/" className="block">
         <img
           src={raavaC.src}
-          className="md:w-[100px] w-[50px] scale-[2.1] md:scale-[1.8] cursor-pointer"
+          className="md:w-[100px] w-[50px] scale-[2.1] md:scale-[1.5] cursor-pointer"
         />
       </Link>
 
-      <div className=" md:flex hidden md:flex-row items-center gap-3 md:gap-4 font-Roboto font-normal lowercase">
+      <div className=" md:flex hidden md:flex-row items-center gap-3 md:gap-4 font-Roboto font-semibold text-base lowercase">
         {navigationItems.map((item, index) => {
           return (
             <Link href={item.href} key={index}>
               <div
                 className={`relative flex items-center gap-2 mx-4 cursor-pointer ${
-                  activeId === item.href ? "text-yellow-500" : "text-white"
+                  activeId === item.href ? "text-[#77C3F2]" : "text-white"
                 }`}
               >
                 <p className="hidden sm:block">{item.title}</p>
@@ -87,17 +87,17 @@ const Navigation = ({ activeId }:{activeId:string}) => {
       </div>
       <div
         className={`md:flex flex-row items-center justify-center hidden ${
-          isTop ? "text-white" : ""
+          isTop ? "text-white" : "text-[#93E1ED]/90"
         }`}
       >
         <div itemType="button" className="cursor-pointer flex mx-2">
-          <FiInstagram className="text-xl" />
+          <FiInstagram className="text-2xl" />
         </div>
         <div itemType="button" className="cursor-pointer flex mx-2">
-          <BiSearch className="text-xl" />
+          <BiSearch className="text-2xl" />
         </div>
         <div itemType="button" className="cursor-pointer flex mx-2">
-          <RiShoppingCartLine className="text-xl" />
+          <RiShoppingCartLine className="text-2xl" />
         </div>
       </div>
 
@@ -146,6 +146,8 @@ const Navigation = ({ activeId }:{activeId:string}) => {
                             ? "bg-[#02B9F4]"
                             : "bg-[#0367A6]"
                         } text-white rounded-md items-center gap-2 cursor-pointer font-Montserrat lowercase`}
+                        itemType='button'
+                        onClick={() => setIsOpen(!isOpen)}
                       >
                         {item.icon}
                         <p className="flex">{item.title}</p>
@@ -161,6 +163,8 @@ const Navigation = ({ activeId }:{activeId:string}) => {
                   <img
                     src={raavaIconColor.src}
                     className="w-[100px] mx-auto scale-[1.9] mt-16 cursor-pointer"
+                    itemType='button'
+                        onClick={() => setIsOpen(!isOpen)}
                   />
                 </Link>
               </div>

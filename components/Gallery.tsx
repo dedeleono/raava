@@ -4,7 +4,7 @@ const Gallery = () => {
       <div className="overflow-hidden min-h-full text-gray-700">
         <div className=" px-5 py-2 mx-auto lg:pt-24 ">
           <div className="flex flex-wrap -m-1 md:-m-2">
-            <div className="flex flex-wrap w-1/2">
+            <div className="flex flex-wrap md:w-1/2 w-full">
               <div className="w-1/2 p-1 md:p-2">
                 <img
                   alt="gallery"
@@ -27,7 +27,7 @@ const Gallery = () => {
                 />
               </div>
             </div>
-            <div className="flex flex-wrap w-1/2">
+            <div className="flex flex-wrap md:w-1/2 w-full">
               <div className="w-full p-1 md:p-2">
                 <img
                   alt="gallery"
