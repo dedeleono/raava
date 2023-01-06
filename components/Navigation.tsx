@@ -75,11 +75,14 @@ const Navigation = ({ activeId }:{activeId:string}) => {
           return (
             <Link href={item.href} key={index}>
               <div
-                className={`relative flex items-center gap-2 mx-4 cursor-pointer text-white px-4 py-3 rounded-md${
-                  activeId === item.href ? " border-[#93E1ED] border-2 bg-[#93E1ED]/40 backdrop-blur-sm text-white" : ""
+                className={`relative flex items-center gap-2 mx-4 cursor-pointer px-4 py-3 rounded-md${
+                  activeId === item.href ? " border-[#93E1ED] border-2 bg-[#93E1ED]/20 backdrop-blur-md " : ""
                 }`}
               >
-                <p className="hidden sm:block">{item.title}</p>
+                <motion.p 
+                whileHover={{color: '#93E1ED' }}
+                
+                className={`hidden sm:block ${activeId === item.href ? 'text-[rgb(147 225 237)]':'text-white'}`}>{item.title}</motion.p>
               </div>
             </Link>
           );

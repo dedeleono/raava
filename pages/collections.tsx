@@ -3,6 +3,7 @@ import { motion as m } from "framer-motion";
 import { container, item } from "../utilities/animation";
 import Gallery from '../components/Gallery'
 import img9 from '../public/imgs/han.jpg'
+import img1 from '../public/imgs/pana.jpg'
 
 const Collections = () => {
   return (
@@ -31,7 +32,7 @@ const Collections = () => {
               Hand - Crafted Desgins
             </m.h1>
           </div>
-          <div className="flex flex-col md:flex-row justify-between">
+          <div className="grid md:grid-cols-2 grid-cols-1 w-full justify-between items-center">
           <m.div
             variants={container}
             initial="hidden"
@@ -41,7 +42,7 @@ const Collections = () => {
             <div className=" overflow-hidden">
               <m.h2 className="text-xs font-Montserrat font-thin" variants={item}>made in</m.h2>
             </div>
-            <div className=" overflow-hidden font-Roboto font-light">
+            <div className=" overflow-hidden font-Roboto font-light ">
               <m.h2 variants={item}>Guatemala</m.h2>
             </div>
           </m.div>
@@ -51,15 +52,7 @@ const Collections = () => {
             animate="show"
             className="text-right lg:text-2xl text-base md:m-0 mt-10"
           >
-            <div className="overflow-hidden py-1">
-              <m.h3 variants={item}>This pickle gonna make you smile.</m.h3>
-            </div>
-            <div className="overflow-hidden py-1">
-              <m.h3 variants={item}>Scottish designs to make you happy.</m.h3>
-            </div>
-            <div className="overflow-hidden py-1">
-              <m.h3 variants={item}>Click contact for cool transition.</m.h3>
-            </div>
+            <img className="w-full rounded-md" src={img1.src}/>
           </m.div>
         </div>
         </main>

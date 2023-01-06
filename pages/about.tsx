@@ -42,7 +42,7 @@ const About = () => {
               <m.h2 className="text-xs font-Montserrat font-thin" variants={item}>why we do what we do?</m.h2>
             </div>
             <div className=" overflow-hidden font-Roboto font-light">
-              <m.h2 variants={item}>Who we are?</m.h2>
+              <m.h2 variants={item}>Who are we?</m.h2>
             </div>
           </m.div>
           <m.div
