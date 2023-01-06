@@ -1,6 +1,6 @@
 import { motion as m } from "framer-motion";
 import { container, item } from "../utilities/animation";
-import img9 from '../public/imgs/img-001.png'
+import img9 from '../public/imgs/1.png'
 
 export default function Home() {
   const d = new Date();
@@ -8,20 +8,21 @@ export default function Home() {
   return (
     <m.div
       animate={{ y: "0%" }}
-      exit={{ opacity: 1 }}
+      exit={{ opacity: 0.1 }}
       initial={{ y: "100%" }}
       transition={{ duration: 0.75, ease: "easeOut" }}
-      style={{backgroundImage:`url("${img9.src}")`, opacity: 0.85}}
+      style={{backgroundImage:`url("${img9.src}")`}}
       className=" text-gray-900 absolute top-0 left-0 w-full h-full lg:px-48 px-16 bg-top bg-cover bg-no-repeat"
     >
+      <div className="absolute w-full min-h-full bg-black/40 left-0 z-[-1]"/>
       <main>
-        <div className="my-96 p-1 font-Montserrat font-thin text-white/80 overflow-hidden ">
+        <div className="my-96 p-1 font-Montserrat font-thin text-white overflow-hidden ">
           <m.h1
             animate={{ y: 0 }}
             initial={{ y: "100%" }}
             transition={{ delay: 0.5, duration: 0.5 }}
-            className="text-6xl text-center lg:text-right lg:text-8xl"
-            style={{textShadow: '1px 1px 0.5px #121618'}}
+            className="text-6xl text-center lg:text-right lg:text-8xl italic"
+            style={{textShadow: '0.5px 0.5px 0.1px #121618'}}
           >
             Style & Comfort
           </m.h1>
@@ -36,7 +37,7 @@ export default function Home() {
             <div className=" overflow-hidden">
               <m.h2 className="text-xs font-Montserrat font-thin" variants={item}>more than a</m.h2>
             </div>
-            <div className=" overflow-hidden font-Roboto font-normal">
+            <div className=" overflow-hidden font-Roboto font-light">
               <m.h2 variants={item}>Furniture Company</m.h2>
             </div>
           </m.div>

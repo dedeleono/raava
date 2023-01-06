@@ -9,10 +9,10 @@ import { BiSearch, BiCollection } from "react-icons/bi";
 import { VscChromeClose } from "react-icons/vsc";
 import { IoInformationSharp } from "react-icons/io5";
 import Link from "next/link";
-import raavaW from "../public/imgs/RAAVA-White.svg";
-import raavaB from "../public/imgs/RaavaBlack.svg";
-import raavaC from "../public/imgs/RaavaColor.svg";
-import raavaIconColor from "../public/imgs/colorIcon.svg";
+import raavaW from "../public/imgs/svgs/RAAVA-White.svg";
+import raavaB from "../public/imgs/svgs/RaavaBlack.svg";
+import raavaC from "../public/imgs/svgs/RaavaColor.svg";
+import raavaIconColor from "../public/imgs/svgs/colorIcon.svg";
 import { useRouter } from "next/router";
 
 const navigationItems = [
@@ -24,7 +24,7 @@ const navigationItems = [
   },
   {
     id: "about",
-    title: "about",
+    title: "why us?",
     href: "/about",
     icon: <BsBag />,
   },
@@ -75,8 +75,8 @@ const Navigation = ({ activeId }:{activeId:string}) => {
           return (
             <Link href={item.href} key={index}>
               <div
-                className={`relative flex items-center gap-2 mx-4 cursor-pointer ${
-                  activeId === item.href ? "text-[#77C3F2]" : "text-white"
+                className={`relative flex items-center gap-2 mx-4 cursor-pointer text-white px-4 py-3 rounded-md${
+                  activeId === item.href ? " border-[#93E1ED] border-2 bg-[#93E1ED]/60 backdrop-blur-sm text-white" : ""
                 }`}
               >
                 <p className="hidden sm:block">{item.title}</p>
@@ -87,7 +87,7 @@ const Navigation = ({ activeId }:{activeId:string}) => {
       </div>
       <div
         className={`md:flex flex-row items-center justify-center hidden ${
-          isTop ? "text-white" : "text-[#93E1ED]/90"
+          isTop ? "text-white" : "text-white"
         }`}
       >
         <div itemType="button" className="cursor-pointer flex mx-2">

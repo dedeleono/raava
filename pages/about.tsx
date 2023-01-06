@@ -2,6 +2,7 @@ import Link from "next/link";
 import { motion as m } from "framer-motion";
 import { container, item } from "../utilities/animation";
 import img9 from '../public/imgs/huehue.jpg';
+import raavaW from "../public/imgs//svgs/RAAVA-White.svg";
 
 const About = () => {
   return (
@@ -15,18 +16,19 @@ const About = () => {
           ease: "easeOut",
         }}
         className="text-gray-900 absolute top-0 left-0 w-full h-full lg:px-48 px-16 bg-cover bg-left"
-        style={{backgroundImage:`url("${img9.src}")`, opacity: 0.95}}
+        style={{backgroundImage:`url("${img9.src}")`}}
       >
+        <div className="absolute w-full min-h-full bg-black/40 left-0 z-[-1]"/>
         <main>
-          <div className="my-96 p-1 overflow-hidden font-Montserrat font-thin text-white/80">
+          <div className="my-96 p-1 overflow-hidden font-Montserrat font-thin text-white italic">
             <m.h1
               animate={{ y: 0 }}
               initial={{ y: "100%" }}
               transition={{ delay: 0.5, duration: 0.5 }}
-              className="text-6xl text-center lg:text-right lg:text-8xl "
-              style={{textShadow: '1px 1px 0.5px #121618'}}
+              className="text-6xl text-center lg:text-right lg:text-8xl lowercase flex flex-row items-top justify-end"
+              style={{textShadow: '0.5px 0.5px 0.1px #121618'}}
             >
-              Why Raava?
+              Why <span className="inline-block items-center"><embed src={raavaW.src} className='w-full'></embed></span>
             </m.h1>
           </div>
           <div className="flex flex-col md:flex-row justify-between">
