@@ -1,5 +1,6 @@
 import { motion as m } from "framer-motion";
 import { container, item } from "../utilities/animation";
+import img9 from '../public/imgs/image-01.jpg'
 
 export default function Home() {
   const d = new Date();
@@ -10,17 +11,18 @@ export default function Home() {
       exit={{ opacity: 1 }}
       initial={{ y: "100%" }}
       transition={{ duration: 0.75, ease: "easeOut" }}
-      className=" text-gray-900 absolute top-0 left-0 w-full h-full bg-orange-100 lg:px-48 px-16 "
+      style={{backgroundImage:`url("${img9.src}")`, opacity: 0.85}}
+      className=" text-gray-900 absolute top-0 left-0 w-full h-full lg:px-48 px-16 bg-top bg-cover bg-no-repeat"
     >
       <main>
-        <div className="my-96 p-1 font-archivo overflow-hidden ">
+        <div className="my-96 p-1 font-Montserrat font-thin text-white/80 overflow-hidden ">
           <m.h1
             animate={{ y: 0 }}
             initial={{ y: "100%" }}
             transition={{ delay: 0.5, duration: 0.5 }}
-            className="text-6xl text-center lg:text-right lg:text-9xl "
+            className="text-6xl text-center lg:text-left lg:text-8xl "
           >
-            Happy Pickle
+            Style & Comfort
           </m.h1>
         </div>
         <div className="flex justify-between">
@@ -58,7 +60,7 @@ export default function Home() {
           </m.div>
         </div>
       </main>
-      <div className="min-h-screen w-full flex items-center justify-center">
+      <div className="min-h-full w-full flex items-center justify-center">
       hello
     </div>
     </m.div>

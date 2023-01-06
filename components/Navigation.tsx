@@ -9,12 +9,37 @@ import { BiSearch, BiCollection } from "react-icons/bi";
 import { VscChromeClose } from "react-icons/vsc";
 import { IoInformationSharp } from "react-icons/io5";
 import Link from "next/link";
-import raava from "../public/imgs/raavaH-Color.svg";
+import raavaW from "../public/imgs/RAAVA-White.svg";
+import raavaB from "../public/imgs/RaavaBlack.svg";
+import raavaC from "../public/imgs/RaavaColor.svg";
 import raavaIconColor from "../public/imgs/colorIcon.svg";
+import { useRouter } from "next/router";
 
-const Navigation = () => {
+const navigationItems = [
+  {
+    id: "collections",
+    title: "collections",
+    href: "/collections",
+    icon: <BiCollection />,
+  },
+  {
+    id: "about",
+    title: "about",
+    href: "/about",
+    icon: <BsBag />,
+  },
+  {
+    id: "contact",
+    title: "contact",
+    href: "/contact",
+    icon: <IoInformationSharp />,
+  },
+];
+
+const Navigation = ({ activeId }) => {
   const [isTop, setIsTop] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
+  const router = useRouter();
 
   function scroll() {
     const scroll = window.pageYOffset;
@@ -39,28 +64,32 @@ const Navigation = () => {
       }`}
     >
       <Link href="/" className="block">
-        <img src={raava.src} className="w-[130px] scale-[2.1] cursor-pointer" />
+        <img
+          src={raavaC.src}
+          className="md:w-[100px] w-[50px] scale-[2.1] md:scale-[1.8] cursor-pointer"
+        />
       </Link>
 
-      <div className=" md:flex hidden md:flex-row items-center gap-3 md:gap-4 font-Montserrat lowercase">
-        <Link href="/collections">
-          <div className="relative flex items-center gap-2 mx-4 cursor-pointer">
-            <p className="hidden sm:block">Collections</p>
-          </div>
-        </Link>
-
-        <Link href="/prodcuts">
-          <div className="relative flex items-center gap-2 mx-4 cursor-pointer">
-            <p className="hidden sm:block">Products</p>
-          </div>
-        </Link>
-        <Link href="/contact">
-          <div className="relative flex items-center gap-2 mx-4 cursor-pointer">
-            <p className="hidden sm:block">About</p>
-          </div>
-        </Link>
+      <div className=" md:flex hidden md:flex-row items-center gap-3 md:gap-4 font-Roboto font-normal lowercase">
+        {navigationItems.map((item, index) => {
+          return (
+            <Link href={item.href} key={index}>
+              <div
+                className={`relative flex items-center gap-2 mx-4 cursor-pointer ${
+                  activeId === item.href ? "text-yellow-500" : "text-white"
+                }`}
+              >
+                <p className="hidden sm:block">{item.title}</p>
+              </div>
+            </Link>
+          );
+        })}
       </div>
-      <div className="md:flex flex-row items-center justify-center hidden">
+      <div
+        className={`md:flex flex-row items-center justify-center hidden ${
+          isTop ? "text-white" : ""
+        }`}
+      >
         <div itemType="button" className="cursor-pointer flex mx-2">
           <FiInstagram className="text-xl" />
         </div>
@@ -73,7 +102,7 @@ const Navigation = () => {
       </div>
 
       <button
-        className="block p-2 text-2xl cursor-pointer ml-auto md:hidden"
+        className="block p-2 text-xl text-white cursor-pointer ml-auto md:hidden"
         onClick={() => setIsOpen(true)}
       >
         <GiHamburgerMenu />
@@ -108,25 +137,22 @@ const Navigation = () => {
               <div className="my-8 border-t border-t-white/10 w-[98%] mx-auto"></div>
 
               <div className="grid grid-cols-3 space-x-2 w-full items-center justify-center">
-                <Link href="/collections">
-                  <div className="w-full flex flex-col border-none px-3 py-5 bg-[#0367A6] text-white rounded-md items-center gap-2 cursor-pointer font-Montserrat lowercase">
-                    <BiCollection />
-                    <p className="flex">Collections</p>
-                  </div>
-                </Link>
-
-                <Link href="/prodcuts">
-                  <div className="w-full flex flex-col border-none px-3 py-5 bg-[#0367A6] text-white rounded-md items-center gap-2 cursor-pointer  font-Montserrat lowercase ">
-                    <BsBag />
-                    <p className="flex">Products</p>
-                  </div>
-                </Link>
-                <Link href="/contact">
-                  <div className="w-full flex flex-col border-none px-3 py-5 bg-[#0367A6] text-white rounded-md items-center gap-2 cursor-pointer font-Montserrat lowercase">
-                    <IoInformationSharp />
-                    <p className="flex">About</p>
-                  </div>
-                </Link>
+                {navigationItems.map((item, index) => {
+                  return (
+                    <Link href={item.href} key={index}>
+                      <div
+                        className={`w-full flex flex-col border-none px-3 py-5 ${
+                          activeId === item.href
+                            ? "bg-[#02B9F4]"
+                            : "bg-[#0367A6]"
+                        } text-white rounded-md items-center gap-2 cursor-pointer font-Montserrat lowercase`}
+                      >
+                        {item.icon}
+                        <p className="flex">{item.title}</p>
+                      </div>
+                    </Link>
+                  );
+                })}
               </div>
 
               <div className="mt-8 border-t border-t-white/10 w-[98%] mx-auto"></div>
