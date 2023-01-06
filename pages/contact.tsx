@@ -1,8 +1,13 @@
+import { useState } from "react";
 import Link from "next/link";
 import { motion as m } from "framer-motion";
 import { container, item } from "../utilities/animation";
+import img9 from '../public/imgs/image-00.jpg';
 
 const Contact = () => {
+
+  const [isFilled, setIsFilled] = useState(false);
+
   return (
     <>
       <m.div
@@ -13,7 +18,8 @@ const Contact = () => {
           duration: 0.75,
           ease: "easeOut",
         }}
-        className="text-gray-900 absolute top-0 left-0 w-full h-full bg-red-400 lg:px-48 px-16"
+        className="text-gray-900 absolute top-0 left-0 w-full h-full bg-red-400 lg:px-48 px-16 bg-cover"
+        style={{backgroundImage:`url("${img9.src}")`, opacity: 0.95}}
       >
         <main>
           <div className="my-96 p-1 overflow-hidden font-Montserrat font-thin text-white/80">
@@ -46,26 +52,92 @@ const Contact = () => {
                 <m.h2 variants={item}>Talk with us</m.h2>
               </div>
             </m.div>
-            <m.div
-              variants={container}
-              initial="hidden"
-              animate="show"
-              className="text-right lg:text-2xl text-base md:m-0 mt-10"
-            >
-              <div className="overflow-hidden py-1">
-                <m.h3 variants={item}>This pickle gonna make you smile.</m.h3>
-              </div>
-              <div className="overflow-hidden py-1">
-                <m.h3 variants={item}>Scottish designs to make you happy.</m.h3>
-              </div>
-              <div className="overflow-hidden py-1">
-                <m.h3 variants={item}>Click contact for cool transition.</m.h3>
-              </div>
-            </m.div>
+            
           </div>
         </main>
-        <div className="min-h-screen w-full flex items-center justify-center">
-          hello
+        <div className="min-h-full mt-10 w-full flex items-center justify-center">
+          <form className="w-full max-w-lg">
+            <div className="flex flex-wrap -mx-3 mb-6">
+              <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+                <label
+                  className="block uppercase tracking-wide text-gray-700 text-xs font-semibold mb-2 font-Roboto"
+                  htmlFor="grid-first-name"
+                >
+                  First Name
+                </label>
+                <input
+                  className="appearance-none block w-full bg-gray-200 text-gray-700 border  rounded-md py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                  id="grid-first-name"
+                  type="text"
+                  placeholder=""
+                />
+                {/* <p className="text-red-500 text-xs italic">
+                  Please fill out this field.
+                </p> */}
+              </div>
+              <div className="w-full md:w-1/2 px-3">
+                <label
+                  className="block uppercase tracking-wide text-gray-700 text-xs font-semibold mb-2 font-Roboto"
+                  htmlFor="grid-last-name"
+                >
+                  Last Name
+                </label>
+                <input
+                  className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded-md py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                  id="grid-last-name"
+                  type="text"
+                  placeholder=""
+                />
+              </div>
+            </div>
+            <div className="flex flex-wrap -mx-3 mb-6">
+              <div className="w-full px-3">
+                <label
+                  className="block uppercase tracking-wide text-gray-700 text-xs mb-2 font-semibold font-Roboto"
+                  htmlFor="grid-password"
+                >
+                  E-mail
+                </label>
+                <input
+                  className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded-md py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                  id="email"
+                  type="email"
+                />
+                {/* <p className="text-gray-600 text-xs italic">
+                  Some tips - as long as needed
+                </p> */}
+              </div>
+            </div>
+            <div className="flex flex-wrap -mx-3 mb-6">
+              <div className="w-full px-3">
+                <label
+                  className="block uppercase tracking-wide text-gray-700 text-xs font-semibold mb-2 font-Roboto"
+                  htmlFor="grid-password"
+                >
+                  Message
+                </label>
+                <textarea
+                  className=" no-resize appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded-md py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none"
+                  id="message"
+                ></textarea>
+                {/* <p className="text-gray-600 text-xs italic">
+                  Re-size can be disabled by set by resize-none / resize-y /
+                  resize-x / resize
+                </p> */}
+              </div>
+            </div>
+            <div className="md:flex md:items-center">
+              <div className="md:w-1/3">
+                <button
+                  className="shadow bg-[#0367A6] hover:bg-[#02B9F4] focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded-md"
+                  type="button"
+                >
+                  Send
+                </button>
+              </div>
+              <div className="md:w-2/3"></div>
+            </div>
+          </form>
         </div>
       </m.div>
     </>

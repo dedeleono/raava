@@ -2,6 +2,7 @@ import Link from "next/link";
 import { motion as m } from "framer-motion";
 import { container, item } from "../utilities/animation";
 import Gallery from '../components/Gallery'
+import img9 from '../public/imgs/han.jpg'
 
 const Collections = () => {
   return (
@@ -14,7 +15,8 @@ const Collections = () => {
           duration: 0.75,
           ease: "easeOut",
         }}
-        className="text-gray-900 absolute top-0 left-0 w-full h-full lg:px-48 px-16"
+        className="text-gray-900 absolute top-0 left-0 w-full h-full lg:px-48 px-16 bg-cover bg-right"
+        style={{backgroundImage:`url("${img9.src}")`, opacity: 0.95}}
       >
         <main>
           <div className="my-96 p-1 overflow-hidden font-Montserrat font-thin text-white/80">
@@ -23,7 +25,7 @@ const Collections = () => {
               initial={{ y: "100%" }}
               transition={{ delay: 0.5, duration: 0.5 }}
               className="text-6xl text-center lg:text-right lg:text-8xl "
-              style={{textShadow: '1px 1px 0.5px #121618'}}
+              style={{textShadow: '1px 1px 0.1px #121618'}}
             >
               Hand - Crafted Desgins
             </m.h1>

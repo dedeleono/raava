@@ -1,6 +1,6 @@
 import { motion as m } from "framer-motion";
 import { container, item } from "../utilities/animation";
-import img9 from '../public/imgs/img-0001.png'
+import img9 from '../public/imgs/img-001.png'
 
 export default function Home() {
   const d = new Date();

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { motion as m } from "framer-motion";
 import { container, item } from "../utilities/animation";
+import img9 from '../public/imgs/huehue.jpg';
 
 const About = () => {
   return (
@@ -13,7 +14,8 @@ const About = () => {
           duration: 0.75,
           ease: "easeOut",
         }}
-        className="text-gray-900 absolute top-0 left-0 w-full h-full lg:px-48 px-16"
+        className="text-gray-900 absolute top-0 left-0 w-full h-full lg:px-48 px-16 bg-cover bg-left"
+        style={{backgroundImage:`url("${img9.src}")`, opacity: 0.95}}
       >
         <main>
           <div className="my-96 p-1 overflow-hidden font-Montserrat font-thin text-white/80">
