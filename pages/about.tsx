@@ -25,10 +25,10 @@ const About = () => {
               animate={{ y: 0 }}
               initial={{ y: "100%" }}
               transition={{ delay: 0.5, duration: 0.5 }}
-              className="text-6xl text-center lg:text-right lg:text-8xl lowercase flex flex-row items-top justify-end"
+              className="text-3xl text-center lg:text-right lg:text-5xl lowercase flex flex-row items-top justify-end"
               style={{textShadow: '0.5px 0.5px 0.1px #121618'}}
             >
-              Why <span className="inline-block items-center"><embed src={raavaW.src} className='w-full'></embed></span>
+              Why <span className="inline-block items-center"><embed src={raavaW.src} className='w-full scale-125'></embed></span>
             </m.h1>
           </div>
           <div className="flex flex-col md:flex-row justify-between">
