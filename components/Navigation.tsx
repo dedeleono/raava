@@ -87,7 +87,7 @@ const Navigation = () => {
             exit={{ translateY: "-100%" }}
             className="fixed inset-0 flex flex-col items-end gap-12 bg-[#1B1B22] p-4 md:hidden w-full"
           >
-            <div className="flex w-full items-center justify-between gap-3">
+            <div className="flex w-full items-center justify-end gap-3">
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 className="rounded text-white p-2 text-2xl"
@@ -106,34 +106,37 @@ const Navigation = () => {
                 <RiShoppingCartLine className="text-xl" />
               </button>
               <div className="my-8 border-t border-t-white/10 w-[98%] mx-auto"></div>
-              <div className="flex justify-center items-center w-full">
-                <div className="grid grid-cols-3 w-full items-center justify-center">
-                  <Link href="/collections">
-                    <div className="w-full flex flex-col border-none px-3 py-5 bg-[#0367A6] text-white rounded-md items-center gap-2 cursor-pointer font-Montserrat lowercase">
-                      <BiCollection />
-                      <p className="flex">Collections</p>
-                    </div>
-                  </Link>
 
-                  <Link href="/prodcuts">
-                    <div className="w-full flex flex-col border-none px-3 py-5 bg-[#0367A6] text-white rounded-md items-center gap-2 cursor-pointer mx-2 font-Montserrat lowercase ">
-                      <BsBag />
-                      <p className="flex">Products</p>
-                    </div>
-                  </Link>
-                  <Link href="/contact">
-                    <div className="w-full flex flex-col border-none px-3 py-5 bg-[#0367A6] text-white rounded-md items-center gap-2 cursor-pointer font-Montserrat lowercase">
-                      <IoInformationSharp />
-                      <p className="flex">About</p>
-                    </div>
-                  </Link>
-                </div>
+              <div className="grid grid-cols-3 space-x-2 w-full items-center justify-center">
+                <Link href="/collections">
+                  <div className="w-full flex flex-col border-none px-3 py-5 bg-[#0367A6] text-white rounded-md items-center gap-2 cursor-pointer font-Montserrat lowercase">
+                    <BiCollection />
+                    <p className="flex">Collections</p>
+                  </div>
+                </Link>
+
+                <Link href="/prodcuts">
+                  <div className="w-full flex flex-col border-none px-3 py-5 bg-[#0367A6] text-white rounded-md items-center gap-2 cursor-pointer  font-Montserrat lowercase ">
+                    <BsBag />
+                    <p className="flex">Products</p>
+                  </div>
+                </Link>
+                <Link href="/contact">
+                  <div className="w-full flex flex-col border-none px-3 py-5 bg-[#0367A6] text-white rounded-md items-center gap-2 cursor-pointer font-Montserrat lowercase">
+                    <IoInformationSharp />
+                    <p className="flex">About</p>
+                  </div>
+                </Link>
               </div>
+
               <div className="mt-8 border-t border-t-white/10 w-[98%] mx-auto"></div>
               <div className="w-full items-center justify-center">
-              <Link href="/" className="block md:hidden">
-                <img src={raavaIconColor.src} className="w-[100px] mx-auto scale-[1.9] mt-16 cursor-pointer"/>
-              </Link>
+                <Link href="/" className="block md:hidden">
+                  <img
+                    src={raavaIconColor.src}
+                    className="w-[100px] mx-auto scale-[1.9] mt-16 cursor-pointer"
+                  />
+                </Link>
               </div>
             </div>
           </motion.div>
