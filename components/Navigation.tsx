@@ -107,22 +107,22 @@ const Navigation = () => {
               </button>
               <div className="my-8 border-t border-t-white/10 w-[98%] mx-auto"></div>
               <div className="flex justify-center items-center w-full">
-                <div className="flex flex-row w-full items-center justify-center">
+                <div className="grid grid-cols-3 w-full items-center justify-center">
                   <Link href="/collections">
-                    <div className="w-full flex flex-col border-none px-3 py-5 bg-[#0367A6] text-white rounded-md items-center gap-2 cursor-pointer font-Montserrat lowercase mx-1">
+                    <div className="w-full flex flex-col border-none px-3 py-5 bg-[#0367A6] text-white rounded-md items-center gap-2 cursor-pointer font-Montserrat lowercase">
                       <BiCollection />
                       <p className="flex">Collections</p>
                     </div>
                   </Link>
 
                   <Link href="/prodcuts">
-                    <div className="w-full flex flex-col border-none px-3 py-5 bg-[#0367A6] text-white rounded-md items-center gap-2 mx-1 cursor-pointer font-Montserrat lowercase ">
+                    <div className="w-full flex flex-col border-none px-3 py-5 bg-[#0367A6] text-white rounded-md items-center gap-2 cursor-pointer mx-2 font-Montserrat lowercase ">
                       <BsBag />
                       <p className="flex">Products</p>
                     </div>
                   </Link>
                   <Link href="/contact">
-                    <div className="w-full flex flex-col border-none px-3 py-5 bg-[#0367A6] text-white rounded-md items-center gap-2 cursor-pointer font-Montserrat lowercase mx-1">
+                    <div className="w-full flex flex-col border-none px-3 py-5 bg-[#0367A6] text-white rounded-md items-center gap-2 cursor-pointer font-Montserrat lowercase">
                       <IoInformationSharp />
                       <p className="flex">About</p>
                     </div>
@@ -130,9 +130,11 @@ const Navigation = () => {
                 </div>
               </div>
               <div className="mt-8 border-t border-t-white/10 w-[98%] mx-auto"></div>
+              <div className="w-full items-center justify-center">
               <Link href="/" className="block md:hidden">
                 <img src={raavaIconColor.src} className="w-[100px] mx-auto scale-[1.9] mt-16 cursor-pointer"/>
               </Link>
+              </div>
             </div>
           </motion.div>
         )}
