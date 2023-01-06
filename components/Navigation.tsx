@@ -36,7 +36,7 @@ const navigationItems = [
   },
 ];
 
-const Navigation = ({ activeId }) => {
+const Navigation = ({ activeId }:{activeId:string}) => {
   const [isTop, setIsTop] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
