@@ -3,6 +3,7 @@ import Head from "next/head";
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import Navigation from "../components/Navigation";
+import Footer from "../components/Footer";
 import { AnimatePresence } from "framer-motion";
 
 export default function App({ Component, pageProps, router }: AppProps) {
@@ -19,6 +20,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
           <Component key={router.pathname} {...pageProps} />
         </AnimatePresence>
       </div>
+      <Footer/>
     </>
   )
 }
