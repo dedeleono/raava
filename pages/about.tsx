@@ -2,7 +2,6 @@ import Link from "next/link";
 import { motion as m } from "framer-motion";
 import { container, item } from "../utilities/animation";
 import img9 from '../public/imgs/huehue.jpg';
-import raavaW from "../public/imgs//svgs/RAAVA-White.svg";
 
 const About = () => {
   return (
@@ -18,7 +17,7 @@ const About = () => {
         className="text-gray-900 absolute top-0 left-0 w-full h-full lg:px-48 px-16 bg-cover bg-left"
         style={{backgroundImage:`url("${img9.src}")`}}
       >
-        <div className="absolute w-full min-h-full bg-black/30 left-0 z-[-1]"/>
+        <div className="absolute w-full min-h-full bg-black/50 left-0 z-[-1]"/>
         <main>
           <div className="my-96 p-1 overflow-hidden font-Montserrat font-thin text-white italic">
             <m.h1
@@ -28,7 +27,7 @@ const About = () => {
               className="text-3xl text-center lg:text-right lg:text-5xl lowercase flex flex-row items-top justify-end"
               style={{textShadow: '0.5px 0.5px 0.1px #121618'}}
             >
-              Why <span className="inline-block items-center"><embed src={raavaW.src} className='w-full scale-125'></embed></span>
+              Why<span className='w-auto font-[BodWars] mt-10 lg:text-6xl text-4xl'>raava</span>
             </m.h1>
           </div>
           <div className="flex flex-col md:flex-row justify-between">
@@ -38,10 +37,10 @@ const About = () => {
             animate="show"
             className="font-latoBold text-left lg:text-6xl text-2xl"
           >
-            <div className=" overflow-hidden">
-              <m.h2 className="text-xs font-Montserrat font-thin" variants={item}>why we do what we do?</m.h2>
+            <div className=" overflow-hidden my-3">
+              <m.h2 className="text-xs font-Montserrat font-extralight text-white" variants={item}>why we do what we do?</m.h2>
             </div>
-            <div className=" overflow-hidden font-Roboto font-light">
+            <div className=" overflow-hidden font-[Metrothin] text-white">
               <m.h2 variants={item}>Who are we?</m.h2>
             </div>
           </m.div>

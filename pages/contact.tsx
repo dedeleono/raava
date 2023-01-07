@@ -21,14 +21,14 @@ const Contact = () => {
         className="text-gray-900 absolute top-0 left-0 w-full h-full lg:px-48 px-16 bg-cover"
         style={{backgroundImage:`url("${img9.src}")`}}
       >
-        <div className="absolute w-full min-h-full bg-black/40 left-0 z-[-1]"/>
+        <div className="absolute w-full min-h-full bg-black/50 left-0 z-[-1]"/>
         <main>
-          <div className="my-96 p-1 overflow-hidden font-Montserrat font-thin text-white italic">
+          <div className="my-96 p-1 overflow-hidden text-white italic">
             <m.h1
               animate={{ y: 0 }}
               initial={{ y: "100%" }}
               transition={{ delay: 0.5, duration: 0.5 }}
-              className="text-4xl text-center lg:text-right lg:text-6xl tracking-wide"
+              className="text-3xl text-center lg:text-right lg:text-5xl tracking-wide font-[MetroReg]"
               style={{ textShadow: "0.5px 0.5px 0.1px #121618" }}
             >
               Let us hear your ideas.
@@ -41,15 +41,15 @@ const Contact = () => {
               animate="show"
               className="font-latoBold text-left lg:text-6xl text-2xl"
             >
-              <div className=" overflow-hidden">
+              <div className=" overflow-hidden my-3">
                 <m.h2
-                  className="text-xs font-Montserrat font-thin"
+                  className="text-xs font-Montserrat font-extralight text-white"
                   variants={item}
                 >
                   get in touch
                 </m.h2>
               </div>
-              <div className=" overflow-hidden font-Roboto font-light">
+              <div className=" overflow-hidden font-[MetroThin] md:text-6xl text-5xl text-white">
                 <m.h2 variants={item}>Talk with us</m.h2>
               </div>
             </m.div>
@@ -61,7 +61,7 @@ const Contact = () => {
             <div className="flex flex-wrap -mx-3 mb-6">
               <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <label
-                  className="block uppercase tracking-wide text-gray-700 text-xs font-semibold mb-2 font-Roboto"
+                  className="block uppercase tracking-wide text-gray-400 text-[0.7rem] mb-2 font-[BodWars]"
                   htmlFor="grid-first-name"
                 >
                   First Name
@@ -78,7 +78,7 @@ const Contact = () => {
               </div>
               <div className="w-full md:w-1/2 px-3">
                 <label
-                  className="block uppercase tracking-wide text-gray-700 text-xs font-semibold mb-2 font-Roboto"
+                  className="block uppercase tracking-wide text-gray-400 text-[0.7rem] mb-2 font-[BodWars]"
                   htmlFor="grid-last-name"
                 >
                   Last Name
@@ -94,7 +94,7 @@ const Contact = () => {
             <div className="flex flex-wrap -mx-3 mb-6">
               <div className="w-full px-3">
                 <label
-                  className="block uppercase tracking-wide text-gray-700 text-xs mb-2 font-semibold font-Roboto"
+                  className="block uppercase tracking-wide text-gray-400 text-[0.7rem] mb-2 font-[BodWars]"
                   htmlFor="grid-password"
                 >
                   E-mail
@@ -112,7 +112,7 @@ const Contact = () => {
             <div className="flex flex-wrap -mx-3 mb-6">
               <div className="w-full px-3">
                 <label
-                  className="block uppercase tracking-wide text-gray-700 text-xs font-semibold mb-2 font-Roboto"
+                  className="block uppercase tracking-wide text-gray-400 text-[0.7rem] mb-2 font-[BodWars]"
                   htmlFor="grid-password"
                 >
                   Message
@@ -127,17 +127,17 @@ const Contact = () => {
                 </p> */}
               </div>
             </div>
-            <div className="md:flex md:items-center">
-              <div className="md:w-1/3">
+            
+              <div className="w-full flex">
                 <button
-                  className="shadow bg-[#0367A6] hover:bg-[#02B9F4] focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded-md"
+                  className="shadow bg-[#93E1ED]/70 md:w-full w-[90%] mx-auto hover:bg-[#93E1ED]/90 hover:text-gray-700 focus:shadow-outline focus:outline-none text-white font-[MetroMed] lowercase py-2 px-4 rounded-md"
                   type="button"
                 >
                   Send
                 </button>
               </div>
-              <div className="md:w-2/3"></div>
-            </div>
+              {/* <div className="md:w-2/3"></div> */}
+            
           </form>
         </div>
       </m.div>

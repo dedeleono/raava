@@ -3,25 +3,28 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: "Archivo";
-  src: url("../public/ArchivoBlack-Regular.ttf");
-}
-@font-face {
-  font-family: "LatoLight";
-  src: url("../public/Lato-Light.ttf");
-}
-@font-face {
-  font-family: "LatoBold";
-  src: url("../public/Lato-Bold.ttf");
-}
-@font-face {
-  font-family: "LatoReg";
-  src: url("../public/Lato-Regular.ttf");
+  font-family: "BodWars";
+  src: url("../public/bodwars.otf");
 }
 
 @font-face {
-  font-family: "BodWars";
-  src: url("../public/bodwars.otf");
+  font-family: "MetroLight";
+  src: url("../public/Metropolis-ExtraLight.otf");
+}
+
+@font-face {
+  font-family: "MetroMed";
+  src: url("../public/Metropolis-Medium.otf");
+}
+
+@font-face {
+  font-family: "MetroReg";
+  src: url("../public/Metropolis-Regular.otf");
+}
+
+@font-face {
+  font-family: "MetroThin";
+  src: url("../public/Metropolis-Thin.otf");
 }
 
 @font-face {
@@ -40,7 +43,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  
+  background-color: #030300;
 }
 
 a {

@@ -8,6 +8,7 @@ import { FiInstagram } from "react-icons/fi";
 import { BiSearch, BiCollection } from "react-icons/bi";
 import { VscChromeClose } from "react-icons/vsc";
 import { IoInformationSharp } from "react-icons/io5";
+import { AiFillHome } from 'react-icons/ai'
 import Link from "next/link";
 import raavaW from "../public/imgs/svgs/RAAVA-White.svg";
 import raavaB from "../public/imgs/svgs/RaavaBlack.svg";
@@ -29,6 +30,12 @@ const navigationItems = [
     icon: <BsBag />,
   },
   {
+    id: "services",
+    title: "services",
+    href: "/services",
+    icon: <IoInformationSharp />,
+  },
+  {
     id: "contact",
     title: "contact",
     href: "/contact",
@@ -41,6 +48,13 @@ const Navigation = ({ activeId }:{activeId:string}) => {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
 
+  useEffect(() => {
+    window.addEventListener("scroll", scroll);
+    return () => {
+      window.removeEventListener("scroll", scroll);
+    };
+  });
+
   function scroll() {
     const scroll = window.pageYOffset;
     if (scroll === 0 && isTop === false) {
@@ -50,29 +64,30 @@ const Navigation = ({ activeId }:{activeId:string}) => {
     }
   }
 
-  useEffect(() => {
-    window.addEventListener("scroll", scroll);
-    return () => {
-      window.removeEventListener("scroll", scroll);
-    };
-  });
+  const scrollTop = () => {
+    window.scrollTo({top: 0, behavior: "smooth"})
+  }
 
   return (
     <div
       className={`fixed right-0 left-0 top-0 z-10 flex items-center justify-between gap-3 bg-transparent px-4 transition-all md:gap-4 md:px-6 ${
-        isTop ? "py-6 md:py-8" : "bg-[#1B1B22] py-4 text-white"
+        isTop ? "py-6 md:py-8" : "bg-[#040401] py-4 text-white"
       }`}
     >
-      <Link href="/" className="block">
+      
+      <Link href='/' >
         {/* <img
           src={raavaC.src}
           className="md:w-[100px] w-[50px] scale-[2.1] md:scale-[1.5] cursor-pointer"
         /> */}
-        <span className="font-[BodWars] text-[#93E1ED] text-3xl">raava</span>
+        <span className="font-[BodWars] text-[#93E1ED] text-3xl cursor-pointer" >raava</span>
       </Link>
+      
 
       <div className=" md:flex hidden md:flex-row items-center gap-3 md:gap-4 font-Roboto font-semibold text-base lowercase">
+      
         {navigationItems.map((item, index) => {
+          
           return (
             <Link href={item.href} key={index}>
               <div
@@ -80,10 +95,7 @@ const Navigation = ({ activeId }:{activeId:string}) => {
                   activeId === item.href ? " border-[#93E1ED] border-2 bg-[#93E1ED]/20 backdrop-blur-md " : ""
                 }`}
               >
-                <motion.p 
-                whileHover={{color: '#93E1ED' }}
-                
-                className={`hidden sm:block ${activeId === item.href ? 'text-[rgb(147 225 237)]':'text-white'}`}>{item.title}</motion.p>
+                <p className={`hidden sm:block ${activeId === item.href ? 'text-[#93E1ED]':'text-gray-100'}`}>{ item.title}</p>
               </div>
             </Link>
           );
