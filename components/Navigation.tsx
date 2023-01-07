@@ -64,10 +64,11 @@ const Navigation = ({ activeId }:{activeId:string}) => {
       }`}
     >
       <Link href="/" className="block">
-        <img
+        {/* <img
           src={raavaC.src}
           className="md:w-[100px] w-[50px] scale-[2.1] md:scale-[1.5] cursor-pointer"
-        />
+        /> */}
+        <span className="font-[BodWars] text-[#93E1ED] text-3xl">raava</span>
       </Link>
 
       <div className=" md:flex hidden md:flex-row items-center gap-3 md:gap-4 font-Roboto font-semibold text-base lowercase">
