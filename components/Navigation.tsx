@@ -8,7 +8,7 @@ import { FiInstagram } from "react-icons/fi";
 import { BiSearch, BiCollection } from "react-icons/bi";
 import { VscChromeClose } from "react-icons/vsc";
 import { IoInformationSharp } from "react-icons/io5";
-import { AiFillHome } from 'react-icons/ai'
+import { RiHomeFill } from "react-icons/ri";
 import Link from "next/link";
 import raavaW from "../public/imgs/svgs/RAAVA-White.svg";
 import raavaB from "../public/imgs/svgs/RaavaBlack.svg";
@@ -37,7 +37,7 @@ const navigationItems = [
   },
 ];
 
-const Navigation = ({ activeId }:{activeId:string}) => {
+const Navigation = ({ activeId }: { activeId: string }) => {
   const [isTop, setIsTop] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
@@ -59,60 +59,27 @@ const Navigation = ({ activeId }:{activeId:string}) => {
   }
 
   const scrollTop = () => {
-    window.scrollTo({top: 0, behavior: "smooth"})
-  }
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <div
-      className={`fixed right-0 left-0 top-0 z-10 flex items-center justify-between gap-3 bg-transparent px-4 transition-all md:gap-4 md:px-6 ${
-        isTop ? "py-6 md:py-8" : "bg-[#040401] py-4 text-white"
-      }`}
+      className={`md:py-8 fixed py-4 text-white right-0 left-0 top-0 z-10 flex items-center justify-between gap-3 bg-transparent px-4 transition-all md:gap-4 md:px-6 `}
     >
-      
-      <Link href='/' >
-        {/* <img
-          src={raavaC.src}
-          className="md:w-[100px] w-[50px] scale-[2.1] md:scale-[1.5] cursor-pointer"
-        /> */}
-        <span className="font-[BodWars] text-[#93E1ED] text-3xl cursor-pointer" >raava</span>
+      <Link href="/">
+        <div className="flex flex-col items-center justify-center mt-6 md:mt-2">
+        <img
+          src={raavaIconColor.src}
+          className="md:w-[80px] w-[50px] scale-[2.1] md:scale-[1.5] cursor-pointer"
+        />
+        <span className="font-[BodWars] text-[#93E1ED] md:text-3xl text-2xl cursor-pointer" >
+          raava
+        </span>
+        </div>
       </Link>
-      
-
-      <div className=" md:flex hidden md:flex-row items-center gap-3 md:gap-4 font-Roboto font-semibold text-base lowercase">
-      
-        {navigationItems.map((item, index) => {
-          
-          return (
-            <Link href={item.href} key={index}>
-              <div
-                className={`relative flex items-center gap-2 mx-4 cursor-pointer px-4 py-3 rounded-md${
-                  activeId === item.href ? " border-[#93E1ED] border-2 bg-[#93E1ED]/20 backdrop-blur-md " : ""
-                }`}
-              >
-                <p className={`hidden sm:block ${activeId === item.href ? 'text-[#93E1ED]':'text-gray-100'}`}>{ item.title}</p>
-              </div>
-            </Link>
-          );
-        })}
-      </div>
-      <div
-        className={`md:flex flex-row items-center justify-center hidden ${
-          isTop ? "text-white" : "text-white"
-        }`}
-      >
-        <div itemType="button" className="cursor-pointer flex mx-2">
-          <FiInstagram className="text-2xl" />
-        </div>
-        <div itemType="button" className="cursor-pointer flex mx-2">
-          <BiSearch className="text-2xl" />
-        </div>
-        <div itemType="button" className="cursor-pointer flex mx-2">
-          <RiShoppingCartLine className="text-2xl" />
-        </div>
-      </div>
 
       <button
-        className="block p-2 text-xl text-white cursor-pointer ml-auto md:hidden"
+        className="block p-2 text-xl text-white cursor-pointer ml-auto"
         onClick={() => setIsOpen(true)}
       >
         <GiHamburgerMenu />
@@ -121,15 +88,15 @@ const Navigation = ({ activeId }:{activeId:string}) => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ translateY: "-100%" }}
-            animate={{ translateY: "0%" }}
-            exit={{ translateY: "-100%" }}
-            className="fixed inset-0 flex flex-col items-end gap-12 bg-[#1B1B22] p-4 md:hidden w-full"
+            initial={{ translateX: "-100%" }}
+            animate={{ translateX: "0%" }}
+            exit={{ translateX: "-100%" }}
+            className="fixed inset-0 top-0 left-0 flex flex-col items-center gap-12 bg-[#1B1B22]/70 backdrop-blur-md p-4 w-64"
           >
             <div className="flex w-full items-center justify-end gap-3">
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="rounded text-white p-2 text-2xl"
+                className="rounded text-white text-2xl"
               >
                 <VscChromeClose />
               </button>
@@ -146,37 +113,53 @@ const Navigation = ({ activeId }:{activeId:string}) => {
               </button>
               <div className="my-8 border-t border-t-white/10 w-[98%] mx-auto"></div>
 
-              <div className="grid grid-cols-3 grid-rows-1 gap-2 w-full items-center justify-center">
-                {navigationItems.map((item, index) => {
-                  return (
-                    <Link href={item.href} key={index}>
-                      <div
-                        className={`w-full flex flex-col border-4 px-3 py-5 font-[MetroReg] ${
-                          activeId === item.href
-                            ? "bg-[#93E1ED]/70 border-[#93E1ED] text-white font-[MetroMed]"
-                            : "bg-[#efe4d2]/70 border-[#efe4d2]/70"
-                        } text-white rounded-md items-center gap-2 cursor-pointer font-Montserrat lowercase`}
-                        itemType='button'
-                        onClick={() => setIsOpen(!isOpen)}
-                      >
-                        {item.icon}
-                        <p className="flex">{item.title}</p>
-                      </div>
-                    </Link>
-                  );
-                })}
+              <div className="overflow-y-auto py-5 px-3 w-full">
+                <ul className="space-y-2">
+                  {navigationItems.map((item, index) => {
+                    return (
+                      <li>
+                        <Link href={item.href} key={index}>
+                          <button
+                            type="button"
+                            className="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
+                            aria-controls="dropdown-pages"
+                            data-collapse-toggle="dropdown-pages"
+                          >
+                            {item.icon}
+                            <span className="flex-1 ml-3 text-center whitespace-nowrap">
+                              {item.title}
+                            </span>
+                          </button>
+                        </Link>
+                      </li>
+                    );
+                  })}
+                </ul>
               </div>
-
-              <div className="mt-8 border-t border-t-white/10 w-[98%] mx-auto"></div>
-              <div className="w-full items-center justify-center">
-                <Link href="/" className="block md:hidden">
+              <div className="absolute bottom-0 left-0 justify-center p-4 space-x-4 w-full flex bg-gray-500/20 backdrop-blur-sm">
+                <a
+                  href="#"
+                  className="inline-flex justify-center p-2 text-gray-500 rounded cursor-pointer dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-600"
+                >
+                  <FiInstagram className="text-2xl" />
+                </a>
+                <button
+                  onClick={scrollTop}
+                  data-tooltip-target="tooltip-settings"
+                  className="inline-flex items-center max-w-[3.5rem] justify-center p-2 text-gray-500 rounded cursor-pointer dark:text-gray-400 dark:hover:text-white hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600"
+                >
                   <img
                     src={raavaIconColor.src}
-                    className="w-[100px] mx-auto scale-[1.9] mt-16 cursor-pointer"
-                    itemType='button'
-                        onClick={() => setIsOpen(!isOpen)}
+                    className="w-full bg-transparent scale-[2.0]"
                   />
-                </Link>
+                </button>
+                <a
+                  href="#"
+                  data-tooltip-target="tooltip-settings"
+                  className="inline-flex items-center justify-center p-2 text-gray-500 rounded cursor-pointer dark:text-gray-400 dark:hover:text-white hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600"
+                >
+                  <RiHomeFill className="text-2xl" />
+                </a>
               </div>
             </div>
           </motion.div>

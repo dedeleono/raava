@@ -3,6 +3,7 @@ import Head from "next/head";
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
 import Navigation from "../components/Navigation";
+import Sidenav from "../components/Sidenav";
 import Footer from "../components/Footer";
 import { AnimatePresence } from "framer-motion";
 
