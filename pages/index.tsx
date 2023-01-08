@@ -32,7 +32,7 @@ export default function Home() {
             variants={container}
             initial="hidden"
             animate="show"
-            className=" text-left lg:text-6xl text-2xl text-white"
+            className=" text-left lg:text-6xl text-4xl text-white"
           >
             <div className=" overflow-hidden my-3">
               <m.h2 className="text-xs font-Montserrat font-thin" variants={item}>more than a</m.h2>

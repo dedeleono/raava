@@ -35,7 +35,7 @@ const About = () => {
             variants={container}
             initial="hidden"
             animate="show"
-            className="font-latoBold text-left lg:text-6xl text-2xl"
+            className="font-latoBold text-left lg:text-6xl text-4xl"
           >
             <div className=" overflow-hidden my-3">
               <m.h2 className="text-xs font-Montserrat font-extralight text-white" variants={item}>why we do what we do?</m.h2>
