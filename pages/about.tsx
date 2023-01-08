@@ -19,12 +19,12 @@ const About = () => {
       >
         <div className="absolute w-full min-h-full bg-black/50 left-0 z-[-1]"/>
         <main>
-          <div className="my-96 p-1 overflow-hidden font-Montserrat font-thin text-white italic">
+          <div className="my-96 p-1 overflow-hidden text-white italic">
             <m.h1
               animate={{ y: 0 }}
               initial={{ y: "100%" }}
               transition={{ delay: 0.5, duration: 0.5 }}
-              className="text-3xl text-center lg:text-right lg:text-5xl lowercase flex flex-row items-top justify-end"
+              className="text-3xl text-center lg:text-right font-[MetroReg] lg:text-5xl lowercase flex flex-row items-top justify-end"
               style={{textShadow: '0.5px 0.5px 0.1px #121618'}}
             >
               Why<span className='w-auto font-[BodWars] mt-10 lg:text-6xl text-4xl'>raava</span>
