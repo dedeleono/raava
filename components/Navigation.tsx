@@ -117,8 +117,8 @@ const Navigation = ({ activeId }: { activeId: string }) => {
                 <ul className="space-y-2">
                   {navigationItems.map((item, index) => {
                     return (
-                      <li>
-                        <Link href={item.href} key={index}>
+                      <li key={index}>
+                        <Link href={item.href}>
                           <button
                             type="button"
                             className="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
