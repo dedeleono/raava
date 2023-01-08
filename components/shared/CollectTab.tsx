@@ -7,7 +7,7 @@ const Grid = () => {
         </h1>
         <p className="lg:pl-6 lg:w-2/3 mx-auto leading-relaxed text-base">
           Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical
-          gentrify, subway tile poke farm-to-table. Franzen you probably haven't
+          gentrify, subway tile poke farm-to-table. Franzen you probably haven&apos;t
           heard of them man bun deep jianbing selfies heirloom.
         </p>
       </div>
