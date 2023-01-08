@@ -43,13 +43,13 @@ const Contact = () => {
             >
               <div className=" overflow-hidden my-3">
                 <m.h2
-                  className="text-xs font-Montserrat font-extralight text-white"
+                  className="text-xs font-Montserrat font-normal text-[#93E1ED]/70"
                   variants={item}
                 >
                   get in touch
                 </m.h2>
               </div>
-              <div className=" overflow-hidden font-[MetroThin] md:text-6xl text-5xl text-white">
+              <div className="overflow-hidden font-[MetroThin] text-white md:text-7xl text-5xl">
                 <m.h2 variants={item}>Talk with us</m.h2>
               </div>
             </m.div>
@@ -57,7 +57,7 @@ const Contact = () => {
           </div>
         </main>
         <div className="min-h-full md:mt-10 mt-6 w-full flex items-center justify-center">
-          <form className="w-full max-w-lg">
+          <form className="md:w-full w-3/4 max-w-lg">
             <div className="flex flex-wrap -mx-3 mb-6">
               <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <label
