@@ -23,15 +23,15 @@ const Contact = () => {
       >
         <div className="absolute w-full min-h-full bg-black/50 left-0 z-[-1]"/>
         <main>
-          <div className="my-96 p-1 overflow-hidden text-white italic">
+          <div className="my-96 p-1 overflow-hidden text-white">
             <m.h1
               animate={{ y: 0 }}
               initial={{ y: "100%" }}
               transition={{ delay: 0.5, duration: 0.5 }}
-              className="text-3xl text-center lg:text-right lg:text-5xl tracking-wide font-[MetroReg]"
+              className="text-3xl text-center lg:text-right lg:text-5xl font-BH italic font-thin"
               style={{ textShadow: "0.5px 0.5px 0.1px #121618" }}
             >
-              Let us hear your ideas.
+              Let us hear your ideas
             </m.h1>
           </div>
           <div className="flex flex-col md:flex-row justify-between">

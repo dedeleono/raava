@@ -26,7 +26,7 @@ const About = () => {
               animate={{ y: 0 }}
               initial={{ y: "100%" }}
               transition={{ delay: 0.5, duration: 0.5 }}
-              className="text-3xl text-center lg:text-right font-[MetroReg] lg:text-5xl lowercase flex flex-row items-top justify-end"
+              className="text-3xl text-center lg:text-right font-BH italic font-thin lg:text-5xl lowercase flex flex-row items-top justify-end"
               style={{ textShadow: "0.5px 0.5px 0.1px #121618" }}
             >
               Why
