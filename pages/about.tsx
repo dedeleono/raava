@@ -3,7 +3,7 @@ import { motion as m } from "framer-motion";
 import { container, item } from "../utilities/animation";
 import img9 from "../public/imgs/huehue.jpg";
 import img from "../public/imgs/image.png";
-import { imageConfigDefault } from "next/dist/shared/lib/image-config";
+import Collections from '../components/CollectionsAndServices'
 
 const About = () => {
   return (
@@ -58,10 +58,10 @@ const About = () => {
                   animate={{ y: 0 }}
                   initial={{ y: "100%" }}
                   transition={{ delay: 0.5, duration: 0.5 }}
-                  className="text-sm my-5 md:w-3/4 md:text-left text-right font-[MetroThin] lg:text-base lowercase flex"
+                  className="text-sm my-5 md:w-3/4 md:text-left text-right font-[MetroThin] lg:text-base flex"
                 >
-                  Our name, Raava, is inspired by the idea of adventure and
-                  determination, and we infuse that spirit into every product we create
+                  Our name, is inspired by the idea of adventure and
+                  determination, and we infuse that spirit into every piece we create
                 </m.span>
               </div>
             </m.div>

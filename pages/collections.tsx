@@ -5,6 +5,7 @@ import Gallery from '../components/Gallery'
 import img9 from '../public/imgs/han.jpg'
 import img1 from '../public/imgs/pana.jpg'
 import Carousel from '../components/Carousel'
+import Services from '../components/CollectionsAndServices'
 
 const Collections = () => {
   return (
@@ -58,7 +59,7 @@ const Collections = () => {
           </m.div>
         </div>
         </main>
-        <Gallery/>
+        <Services/>
       </m.div>
     </>
   );
