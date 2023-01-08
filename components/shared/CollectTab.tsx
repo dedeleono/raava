@@ -1,4 +1,6 @@
 import img from '../../public/imgs/1.png'
+import img1 from '../../public/imgs/home.png'
+import img2 from '../../public/imgs/top.png'
 
 const Grid = () => {
   return (
@@ -10,16 +12,16 @@ const Grid = () => {
 
         <div className="grid grid-cols-1 gap-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
           <div>
-            <img
+          <img
               className="object-cover w-full rounded-lg h-96 "
-              src="https://images.unsplash.com/photo-1621111848501-8d3634f82336?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1565&q=80"
+              src={img1.src}
               alt=""
             />
             <h2 className="mt-4 text-2xl font-semibold text-gray-800 capitalize dark:text-white">
-              Best website collections
+              Home
             </h2>
-            <p className="mt-2 text-lg tracking-wider text-blue-500 uppercase dark:text-blue-400 ">
-              Website
+            <p className="mt-4 text-xs lowercase text-blue-100">
+              #home #interiordesign #furnitre #comfort
             </p>
           </div>
 
@@ -32,22 +34,22 @@ const Grid = () => {
             <h2 className="mt-4 text-2xl font-semibold text-gray-800 capitalize dark:text-white">
               Office
             </h2>
-            <p className="mt-2 text-lg tracking-wider text-blue-500 uppercase dark:text-blue-400 ">
-              Ui kit
+            <p className="mt-4 text-xs lowercase text-blue-100">
+              #office #comfort #illumintation
             </p>
           </div>
 
           <div>
-            <img
+          <img
               className="object-cover w-full rounded-lg h-96 "
-              src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+              src={img2.src}
               alt=""
             />
             <h2 className="mt-4 text-2xl font-semibold text-gray-800 capitalize dark:text-white">
-              Ton’s of mobile mockup
+              Designer
             </h2>
-            <p className="mt-2 text-lg tracking-wider text-blue-500 uppercase dark:text-blue-400 ">
-              Mockups
+            <p className="mt-4 text-xs lowercase text-blue-100">
+              #designerfurniture #furnituredesign #beautiful
             </p>
           </div>
         </div>

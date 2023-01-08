@@ -17,7 +17,7 @@ const servicesTab = () => {
           className="rounded-md shadow-lg"
         />
 
-        <div className="flex-grow text-left py-10 mx-10">
+        <div className="flex-grow text-left py-10 md:mx-10 mx-5">
           <h2 className="text-gray-100 text-lg title-font font-medium mb-2">
             Illumination Services
           </h2>
@@ -42,7 +42,7 @@ const servicesTab = () => {
         </div>
       </div>
       <div className="flex items-center mx-auto md:py-10 md:px-10 mb-10 md:flex-row flex-col-reverse w-full bg-gray-700/30 rounded-md justify-center">
-        <div className="flex-grow text-left py-10 mx-10">
+        <div className="flex-grow text-left py-10 md:mx-10 mx-5">
           <h2 className="text-gray-100 text-lg title-font font-medium mb-2">
             Interior Design
           </h2>
