@@ -11,44 +11,44 @@ const Grid = () => {
         </h1> */}
 
         <div className="grid grid-cols-1 gap-8 xl:mt-12 xl:gap-12 md:grid-cols-2 xl:grid-cols-3">
-          <div>
+          <div className='my-5'>
           <img
               className="object-cover w-full rounded-lg h-96 "
               src={img1.src}
               alt=""
             />
-            <h2 className="mt-4 text-2xl font-semibold text-gray-800 capitalize dark:text-white">
+            <h2 className="mt-4 text-2xl font-semibold capitalize text-white font-[MetroMed] italic">
               Home
             </h2>
-            <p className="mt-4 text-xs lowercase text-blue-100">
+            <p className="mt-4 text-xs lowercase text-[#efe4d2]">
               #home #interiordesign #furnitre #comfort
             </p>
           </div>
 
-          <div>
+          <div className='my-5'>
             <img
               className="object-cover w-full rounded-lg h-96 "
               src={img.src}
               alt=""
             />
-            <h2 className="mt-4 text-2xl font-semibold text-gray-800 capitalize dark:text-white">
+            <h2 className="mt-4 text-2xl font-semibold capitalize text-white font-[MetroMed] italic">
               Office
             </h2>
-            <p className="mt-4 text-xs lowercase text-blue-100">
+            <p className="mt-4 text-xs lowercase text-[#efe4d2]">
               #office #comfort #illumintation
             </p>
           </div>
 
-          <div>
+          <div className='my-5'>
           <img
               className="object-cover w-full rounded-lg h-96 "
               src={img2.src}
               alt=""
             />
-            <h2 className="mt-4 text-2xl font-semibold text-gray-800 capitalize dark:text-white">
+            <h2 className="mt-4 text-2xl font-semibold capitalize text-white font-[MetroMed] italic">
               Designer
             </h2>
-            <p className="mt-4 text-xs lowercase text-blue-100">
+            <p className="mt-4 text-xs lowercase text-[#efe4d2]">
               #designerfurniture #furnituredesign #beautiful
             </p>
           </div>
