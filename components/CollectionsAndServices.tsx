@@ -12,7 +12,7 @@ const Collections = () => {
   }, []);
 
   return (
-    <div className="container text-white py-24 mx-auto flex flex-wrap flex-col">
+    <div className="container text-white py-24 mx-auto flex flex-wrap flex-col ">
       <div className="flex mx-auto flex-row mb-20 w-auto">
         <button
           onClick={() => setIsCollection(0)}
