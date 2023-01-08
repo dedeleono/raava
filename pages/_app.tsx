@@ -14,7 +14,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
         <meta name="Raava Furniture" content="Raava" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="font-latoBold relative h-screen py-24 px-12 lg:px-48">
+      <div className="font-latoBold relative h-screen py-24 px-12 lg:px-48 ">
         <Navigation activeId={router.route}/>
         <AnimatePresence initial={false}>
           <Component key={router.pathname} {...pageProps} />

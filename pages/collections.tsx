@@ -4,6 +4,7 @@ import { container, item } from "../utilities/animation";
 import Gallery from '../components/Gallery'
 import img9 from '../public/imgs/han.jpg'
 import img1 from '../public/imgs/pana.jpg'
+import Carousel from '../components/Carousel'
 
 const Collections = () => {
   return (
@@ -40,9 +41,9 @@ const Collections = () => {
             className="font-latoBold text-left lg:text-6xl text-4xl"
           >
             <div className=" overflow-hidden text-white my-3">
-              <m.h2 className="text-xs font-Montserrat font-extralight" variants={item}>made in</m.h2>
+              <m.h2 className="text-xs font-Montserrat font-normal text-[#93E1ED]/70" variants={item}>made in</m.h2>
             </div>
-            <div className=" overflow-hidden font-[MetroThin] text-white ">
+            <div className=" overflow-hidden font-[MetroThin] text-white md:text-7xl text-6xl">
               <m.h2 variants={item}>Guatemala</m.h2>
             </div>
           </m.div>
@@ -52,7 +53,8 @@ const Collections = () => {
             animate="show"
             className="text-right lg:text-2xl text-base md:m-0 mt-10"
           >
-            <img className="w-full rounded-md" src={img1.src}/>
+            {/* <img className="w-full rounded-md" src={img1.src}/> */}
+            <Carousel/>
           </m.div>
         </div>
         </main>
