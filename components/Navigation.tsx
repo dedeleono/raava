@@ -152,15 +152,15 @@ const Navigation = ({ activeId }:{activeId:string}) => {
               </button>
               <div className="my-8 border-t border-t-white/10 w-[98%] mx-auto"></div>
 
-              <div className="grid grid-cols-3 space-x-2 w-full items-center justify-center">
+              <div className="grid grid-cols-2 grid-rows-2 gap-2 w-full items-center justify-center">
                 {navigationItems.map((item, index) => {
                   return (
                     <Link href={item.href} key={index}>
                       <div
-                        className={`w-full flex flex-col border-none px-3 py-5 ${
+                        className={`w-full flex flex-col border-4 px-3 py-5 font-[MetroReg] ${
                           activeId === item.href
-                            ? "bg-[#02B9F4]"
-                            : "bg-[#0367A6]"
+                            ? "bg-[#93E1ED]/70 border-[#93E1ED] text-white font-[MetroMed]"
+                            : "bg-[#0367A6] border-[#0367A6]"
                         } text-white rounded-md items-center gap-2 cursor-pointer font-Montserrat lowercase`}
                         itemType='button'
                         onClick={() => setIsOpen(!isOpen)}
