@@ -134,7 +134,7 @@ const Navigation = ({ activeId }: { activeId: string }) => {
               </div>
               <div className="absolute bottom-0 left-0 justify-center p-4 space-x-4 w-full flex bg-gray-500/20 backdrop-blur-sm">
                 <a
-                  href="/"
+                  href="#"
                   className="inline-flex items-center justify-center p-2 text-gray-400 rounded cursor-pointer"
                 >
                   <FiInstagram className="text-2xl" />
