@@ -44,7 +44,7 @@ const Collections = () => {
             <div className=" overflow-hidden text-white my-3">
               <m.h2 className="text-xs font-Montserrat font-normal text-[#93E1ED]/70" variants={item}>made in</m.h2>
             </div>
-            <div className=" overflow-hidden font-[MetroThin] text-white md:text-7xl text-6xl">
+            <div className=" overflow-hidden font-[MetroThin] text-white md:text-7xl text-5xl">
               <m.h2 variants={item}>Guatemala</m.h2>
             </div>
           </m.div>

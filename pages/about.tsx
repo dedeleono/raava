@@ -16,7 +16,7 @@ const About = () => {
           duration: 0.75,
           ease: "easeOut",
         }}
-        className="text-gray-900 absolute top-0 left-0 w-full h-full lg:px-48 px-16 bg-cover bg-left"
+        className="text-gray-900 absolute top-0 left-0 w-full min-h-screen h-full lg:px-48 px-16 bg-cover bg-left"
         style={{ backgroundImage: `url("${img9.src}")` }}
       >
         <div className="absolute w-full min-h-full bg-black/50 left-0 z-[-1]" />
@@ -47,10 +47,10 @@ const About = () => {
                   className="text-xs font-Montserrat font-normal text-[#93E1ED]/70"
                   variants={item}
                 >
-                  why we do what we do?
+                  get to know us
                 </m.h2>
               </div>
-              <div className=" overflow-hidden font-[MetroLight] text-white md:text-7xl text-6xl">
+              <div className=" overflow-hidden font-[MetroLight] text-white md:text-7xl text-4xl">
                 <m.h2 variants={item}>Who are we?</m.h2>
               </div>
               <div className=" overflow-hidden font-[Metrothin] text-white mt-5">
@@ -77,9 +77,7 @@ const About = () => {
             </m.div>
           </div>
         </main>
-        <div className="min-h-screen w-full flex items-center justify-center">
-          hello
-        </div>
+        
       </m.div>
     </>
   );

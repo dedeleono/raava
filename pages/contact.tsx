@@ -18,7 +18,7 @@ const Contact = () => {
           duration: 0.75,
           ease: "easeOut",
         }}
-        className="text-gray-900 absolute top-0 left-0 w-full h-full lg:px-48 px-16 bg-cover"
+        className="text-gray-900 absolute top-0 left-0 w-full min-h-screen h-full lg:px-48 px-16 bg-cover"
         style={{backgroundImage:`url("${img9.src}")`}}
       >
         <div className="absolute w-full min-h-full bg-black/50 left-0 z-[-1]"/>
@@ -34,7 +34,7 @@ const Contact = () => {
               Let us hear your ideas
             </m.h1>
           </div>
-          <div className="flex flex-col md:flex-row justify-between">
+          <div className="flex flex-col md:flex-row justify-between pt-3">
             <m.div
               variants={container}
               initial="hidden"
@@ -49,15 +49,15 @@ const Contact = () => {
                   get in touch
                 </m.h2>
               </div>
-              <div className="overflow-hidden font-[MetroThin] text-white md:text-7xl text-5xl">
+              <div className="overflow-hidden font-[MetroThin] text-white md:text-7xl text-4xl">
                 <m.h2 variants={item}>Talk with us</m.h2>
               </div>
             </m.div>
             
           </div>
         </main>
-        <div className="min-h-full md:mt-10 mt-6 w-full flex items-center justify-center">
-          <form className="md:w-full w-3/4 max-w-lg">
+        <div className="min-h-full md:mt-10 mt-4 w-full flex items-center justify-center">
+          <form className="w-full max-w-lg">
             <div className="flex flex-wrap -mx-3 mb-6">
               <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <label

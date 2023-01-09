@@ -1,39 +1,35 @@
 import React, { useState, useEffect } from "react";
-import Image from "next/image";
+import Link from "next/link";
 import { RiShoppingCartLine } from "react-icons/ri";
-import { BsBag } from "react-icons/bs";
+import { BsFillPeopleFill } from "react-icons/bs";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { motion, AnimatePresence } from "framer-motion";
 import { FiInstagram } from "react-icons/fi";
-import { BiSearch, BiCollection } from "react-icons/bi";
+import { BiSearch } from "react-icons/bi";
 import { VscChromeClose } from "react-icons/vsc";
-import { IoInformationSharp } from "react-icons/io5";
+import { IoGitNetworkOutline } from "react-icons/io5";
 import { RiHomeFill } from "react-icons/ri";
-import Link from "next/link";
-import raavaW from "../public/imgs/svgs/RAAVA-White.svg";
-import raavaB from "../public/imgs/svgs/RaavaBlack.svg";
-import raavaC from "../public/imgs/svgs/RaavaColor.svg";
 import raavaIconColor from "../public/imgs/svgs/colorIcon.svg";
 import { useRouter } from "next/router";
-
+import {MdOutlinePermContactCalendar} from 'react-icons/md'
 const navigationItems = [
   {
     id: "collections",
     title: "what we do",
     href: "/collections",
-    icon: <BiCollection />,
+    icon: <IoGitNetworkOutline className="text-xl"/>,
   },
   {
     id: "about",
     title: "why us?",
     href: "/about",
-    icon: <BsBag />,
+    icon: <BsFillPeopleFill className="text-xl"/>,
   },
   {
     id: "contact",
     title: "contact",
     href: "/contact",
-    icon: <IoInformationSharp />,
+    icon: <MdOutlinePermContactCalendar className="text-xl"/>,
   },
 ];
 
@@ -60,11 +56,12 @@ const Navigation = ({ activeId }: { activeId: string }) => {
 
   const scrollTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+    setIsOpen(!isOpen)
   };
 
   return (
     <div
-      className={`md:py-8 fixed py-4 text-white right-0 left-0 top-0 z-10 flex items-center justify-between gap-3 bg-transparent px-4 transition-all md:gap-4 md:px-6 `}
+      className={`md:py-8 fixed py-4 text-white right-0 left-0 top-0 z-10 flex items-center justify-between gap-3 bg-transparent px-4 transition-all md:gap-4 md:px-6 backdrop-blur-sm`}
     >
       <Link href="/">
         <div className="flex flex-col items-center justify-center mt-6 md:mt-2">
@@ -91,7 +88,7 @@ const Navigation = ({ activeId }: { activeId: string }) => {
             initial={{ translateX: "-100%" }}
             animate={{ translateX: "0%" }}
             exit={{ translateX: "-100%" }}
-            className="fixed inset-0 top-0 left-0 flex flex-col items-center gap-12 bg-[#1B1B22]/70 backdrop-blur-md p-4 w-64"
+            className="fixed inset-0 min-h-screen top-0 left-0 flex flex-col items-center gap-12 bg-[#1B1B22]/95 !backdrop-blur-sm p-4 w-64"
           >
             <div className="flex w-full items-center justify-end gap-3">
               <button
@@ -102,7 +99,7 @@ const Navigation = ({ activeId }: { activeId: string }) => {
               </button>
             </div>
 
-            <div className="flex flex-col items-end gap-4 text-white w-full">
+            <div className="flex flex-col items-end gap-4 text-white w-full ">
               <button className="flex items-center gap-3">
                 Search
                 <BiSearch className="text-xl" />
@@ -119,17 +116,16 @@ const Navigation = ({ activeId }: { activeId: string }) => {
                     return (
                       <li key={index}>
                         <Link href={item.href}>
-                          <button
-                            type="button"
-                            className="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700"
-                            aria-controls="dropdown-pages"
-                            data-collapse-toggle="dropdown-pages"
+                          <motion.button
+                            onClick={()=>setIsOpen(!isOpen)}
+                            whileHover={{backgroundColor: 'rgba(147, 225, 237, 0.8)', color: 'black', transition: {duration: 0.3}}}
+                            className={`flex items-center px-2 py-3 my-2 w-full text-base font-normal text-white rounded-md group ${activeId === item.href ? 'bg-[#93E1ED]/80 text-black' : ''}`}
                           >
                             {item.icon}
                             <span className="flex-1 ml-3 text-center whitespace-nowrap">
                               {item.title}
                             </span>
-                          </button>
+                          </motion.button>
                         </Link>
                       </li>
                     );
@@ -138,28 +134,29 @@ const Navigation = ({ activeId }: { activeId: string }) => {
               </div>
               <div className="absolute bottom-0 left-0 justify-center p-4 space-x-4 w-full flex bg-gray-500/20 backdrop-blur-sm">
                 <a
-                  href="#"
-                  className="inline-flex justify-center p-2 text-gray-500 rounded cursor-pointer dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-600"
+                  href="/"
+                  className="inline-flex items-center justify-center p-2 text-gray-400 rounded cursor-pointer"
                 >
                   <FiInstagram className="text-2xl" />
                 </a>
                 <button
                   onClick={scrollTop}
                   data-tooltip-target="tooltip-settings"
-                  className="inline-flex items-center max-w-[3.5rem] justify-center p-2 text-gray-500 rounded cursor-pointer dark:text-gray-400 dark:hover:text-white hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600"
+                  className="inline-flex items-center max-w-[3.5rem] justify-center p-2 text-gray-400 rounded cursor-pointer dark:text-gray-400 dark:hover:text-white hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600"
                 >
                   <img
                     src={raavaIconColor.src}
                     className="w-full bg-transparent scale-[2.0]"
                   />
                 </button>
-                <a
-                  href="#"
+                <Link
+                  href="/"
+                  onClick={()=>setIsOpen(!isOpen)}
                   data-tooltip-target="tooltip-settings"
-                  className="inline-flex items-center justify-center p-2 text-gray-500 rounded cursor-pointer dark:text-gray-400 dark:hover:text-white hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600"
+                  className="inline-flex items-center justify-center p-2 text-gray-400 rounded cursor-pointer "
                 >
                   <RiHomeFill className="text-2xl" />
-                </a>
+                </Link>
               </div>
             </div>
           </motion.div>
