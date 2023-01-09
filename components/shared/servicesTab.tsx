@@ -8,13 +8,13 @@ const servicesTab = () => {
       {/* <h1 className="text-3xl font-semibold text-center text-gray-800 capitalize lg:text-4xl dark:text-white mb-20">
           What We Do
         </h1> */}
-      <div className="flex items-center w-full mx-auto bg-gray-700/30 rounded-md justify-center mb-10 md:py-5 md:px-5 md:flex-row flex-col">
+      <div className="flex items-center w-full mx-auto bg-gray-700/30 rounded-md justify-center mb-10 md:py-5 md:px-5 lg:flex-row flex-col">
         <Image
           src={img.src}
           width={400}
           height={275}
           alt={""}
-          className="rounded-md shadow-lg md:w-auto w-full"
+          className="rounded-md shadow-lg lg:w-auto w-full"
         />
 
         <div className="flex-grow text-left md:py-5 py-10 md:px-5 mx-5">
