@@ -11,7 +11,7 @@ const Desc = () => {
             </h1>
             <p className="lg:pl-6 lg:w-2/3 mx-auto leading-relaxed text-base text-gray-300 font-[MetroThin]">
               At RAAVA, we believe in the power of handmade craftsmanship.
-              That's why we are proud to offer a range of unique and beautifully
+              That&apos;s why we are proud to offer a range of unique and beautifully
               crafted products, all made by hand in Guatemala. Each piece is a
               one-of-a-kind creation, made with care and attention to detail by
               skilled local artisans. <br/><br/>When you shop with RAAVA, you are not only

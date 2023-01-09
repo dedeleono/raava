@@ -62,7 +62,7 @@ export default function Home() {
                 className="text-sm my-5 text-right font-[MetroThin] lg:text-base flex"
               >
                 We believe that sharing is at the heart of our
-                community. Whether it's sharing knowledge, experiences, or
+                community. Whether it&apos;s sharing knowledge, experiences, or
                 resources. <br></br><br></br>Join us in fostering a culture of collaboration and support.
               </m.span>
             </div>
