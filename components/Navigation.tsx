@@ -12,6 +12,7 @@ import { RiHomeFill } from "react-icons/ri";
 import raavaIconColor from "../public/imgs/svgs/colorIcon.svg";
 import { useRouter } from "next/router";
 import {MdOutlinePermContactCalendar} from 'react-icons/md'
+import Image from "next/image";
 const navigationItems = [
   {
     id: "collections",
@@ -61,22 +62,25 @@ const Navigation = ({ activeId }: { activeId: string }) => {
 
   return (
     <div
-      className={`md:py-8 fixed py-4 text-white right-0 left-0 top-0 z-10 flex items-center justify-between gap-3 bg-transparent px-4 transition-all md:gap-4 md:px-6 backdrop-blur-sm`}
+      className={`absolute text-white right-0 left-0 w-full top-0 z-10 flex items-center justify-between gap-3 bg-transparent px-4 transition-all lg:gap-4 lg:px-6`}
     >
       <Link href="/">
-        <div className="flex flex-col items-center justify-center mt-6 md:mt-2">
-        <img
+        <div className="flex flex-col items-center justify-center  backdrop-blur-sm">
+        <Image
+        alt=""
+        width={125}
+        height={125}
           src={raavaIconColor.src}
-          className="md:w-[80px] w-[50px] scale-[2.1] md:scale-[1.5] cursor-pointer"
+          className="pt-2 cursor-pointer"
         />
-        <span className="font-[BodWars] text-[#93E1ED] md:text-3xl text-2xl cursor-pointer" >
+        <span className="font-[BodWars] text-[#93E1ED]  lg:text-3xl text-2xl cursor-pointer" >
           raava
         </span>
         </div>
       </Link>
 
       <button
-        className="block p-2 text-xl text-white cursor-pointer ml-auto"
+        className="block p-2 text-xl text-white cursor-pointer ml-auto "
         onClick={() => setIsOpen(true)}
       >
         <GiHamburgerMenu />
@@ -84,22 +88,27 @@ const Navigation = ({ activeId }: { activeId: string }) => {
 
       <AnimatePresence>
         {isOpen && (
-          <motion.div
-            initial={{ translateX: "-100%" }}
-            animate={{ translateX: "0%" }}
-            exit={{ translateX: "-100%" }}
-            className="fixed inset-0 min-h-screen top-0 left-0 flex flex-col items-center gap-12 bg-[#1B1B22]/95 !backdrop-blur-sm p-4 w-64"
+          
+            <motion.div
+            initial={{translateX: "50%" }}
+            animate={{ translateX: "0%"}}
+            exit={{ translateX: "500%" }}
+            style={{
+              inset: '0 0 0 calc(100% - 16rem)'
+            }}
+            
+            className="fixed min-h-screen flex flex-col items-center gap-12 bg-[#1B1B22]/95 !backdrop-blur-md p-4 w-64"
           >
-            <div className="flex w-full items-center justify-end gap-3">
+            <div className="flex w-full items-center justify-end gap-3 my-8">
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="rounded text-white text-2xl"
+                className="rounded text-white text-2xl "
               >
-                <VscChromeClose />
+                <VscChromeClose className=""/>
               </button>
             </div>
 
-            <div className="flex flex-col items-end gap-4 text-white w-full ">
+            <div className="flex flex-col items-end gap-4 text-white w-full">
               <button className="flex items-center gap-3">
                 Search
                 <BiSearch className="text-xl" />
@@ -110,7 +119,7 @@ const Navigation = ({ activeId }: { activeId: string }) => {
               </button>
               <div className="my-8 border-t border-t-white/10 w-[98%] mx-auto"></div>
 
-              <div className="overflow-y-auto py-5 px-3 w-full">
+              <div className="overflow-y-auto lg:py-5 py-12 px-3 w-full">
                 <ul className="space-y-2">
                   {navigationItems.map((item, index) => {
                     return (
@@ -160,6 +169,7 @@ const Navigation = ({ activeId }: { activeId: string }) => {
               </div>
             </div>
           </motion.div>
+          
         )}
       </AnimatePresence>
     </div>
