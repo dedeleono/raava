@@ -14,7 +14,7 @@ const Collections = () => {
   return (
     <div className="container text-white py-24 mx-auto flex flex-wrap flex-col ">
       <div className="flex mx-auto flex-row mb-20 w-auto">
-        <button
+        {/* <button
           onClick={() => setIsCollection(0)}
           className={`sm:px-6 py-3 w-1/2 font-[BodWars] mx-1 sm:w-auto justify-center  border-b-2 title-font font-medium text-xs md:text-sm flex items-center leading-none ${
             isCollection === 0
@@ -35,9 +35,13 @@ const Collections = () => {
         >
           <GiWoodAxe className="mr-3" />
           Services
-        </button>
+        </button> */}
       </div>
-      {isCollection ? <Services /> : <Grid />}
+      {/* isCollection ? <Services /> : <Grid /> */}
+      <div className="w-full flex flex-col items-center">
+        <h2 className="text-2xl lg:text-4xl text-[#93E1ED] font-[BodWars] uppercase py-10">Our Collections</h2>
+        <Grid/>
+      </div>
     </div>
   );
 };
