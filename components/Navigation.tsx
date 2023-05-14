@@ -65,22 +65,22 @@ const Navigation = ({ activeId }: { activeId: string }) => {
       className={`absolute text-white right-0 left-0 w-full top-0 z-10 flex items-center justify-between gap-3 bg-transparent px-4 transition-all lg:gap-4 lg:px-6`}
     >
       <Link href="/">
-        <div className="flex flex-col items-center justify-center  backdrop-blur-sm">
+        <div className="flex flex-col items-center justify-center backdrop-blur-sm">
         <Image
         alt=""
-        width={125}
-        height={125}
+        width={100}
+        height={100}
           src={raavaIconColor.src}
-          className="pt-2 cursor-pointer"
+          className=" cursor-pointer"
         />
-        <span className="font-[BodWars] text-[#93E1ED]  lg:text-3xl text-2xl cursor-pointer" >
+        <span className="font-[BodWars] text-[#93E1ED] block absolute top-[48px] lg:text-2xl text-xl cursor-pointer" >
           raava
         </span>
         </div>
       </Link>
 
       <button
-        className="block p-2 text-xl text-white cursor-pointer ml-auto "
+        className="pt-2 text-xl text-white cursor-pointer ml-auto "
         onClick={() => setIsOpen(true)}
       >
         <GiHamburgerMenu />
@@ -148,16 +148,15 @@ const Navigation = ({ activeId }: { activeId: string }) => {
                 >
                   <FiInstagram className="text-2xl" />
                 </a>
-                <button
-                  onClick={scrollTop}
-                  data-tooltip-target="tooltip-settings"
-                  className="inline-flex items-center max-w-[3.5rem] justify-center p-2 text-gray-400 rounded cursor-pointer dark:text-gray-400 dark:hover:text-white hover:text-gray-900 hover:bg-gray-100 dark:hover:bg-gray-600"
-                >
-                  <img
+                
+                  <Image
+                    alt=""
+                    width={50}
+                    height={50}
                     src={raavaIconColor.src}
-                    className="w-full bg-transparent scale-[2.0]"
+                    className="disabled bg-transparent scale-[1.75]"
                   />
-                </button>
+                
                 <Link
                   href="/"
                   onClick={()=>setIsOpen(!isOpen)}

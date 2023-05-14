@@ -3,6 +3,7 @@ import { motion as m } from "framer-motion";
 import { container, item } from "../utilities/animation";
 import img9 from "../public/imgs/huehue.jpg";
 import img from "../public/imgs/image.png";
+import Image from "next/image";
 import Collections from '../components/CollectionsAndServices'
 
 const About = () => {
@@ -16,7 +17,7 @@ const About = () => {
           duration: 0.75,
           ease: "easeOut",
         }}
-        className="text-gray-900 absolute top-0 left-0 w-full min-h-screen h-full lg:px-48 px-16 bg-cover bg-left"
+        className="text-gray-900 absolute top-0 left-0 w-full min-h-screen h-full lg:px-48 px-16 bg-cover bg-left "
         style={{ backgroundImage: `url("${img9.src}")` }}
       >
         <div className="absolute w-full min-h-full bg-black/50 left-0 z-[-1]" />
@@ -35,7 +36,7 @@ const About = () => {
               </span>
             </m.h1>
           </div>
-          <div className="grid md:grid-cols-2 grid-cols-1 justify-between">
+          <div className="grid md:grid-cols-2 grid-cols-1 justify-between pb-24">
             <m.div
               variants={container}
               initial="hidden"
@@ -72,7 +73,7 @@ const About = () => {
               className="text-right lg:text-2xl text-base md:m-0 mt-10 w-full"
             >
               <div className="w-full">
-                <img src={img.src} className="w-full md:mt-0 mt-5"></img>
+                <Image src={img.src} alt="" width={600} height={500} className="w-full md:mt-0 mt-5"></Image>
               </div>
             </m.div>
           </div>
