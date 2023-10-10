@@ -83,14 +83,14 @@ const Navigation = ({ activeId }: { activeId: string }) => {
         <ul className="flex flex-row w-auto ml-24">
           {navigationItems.map((navLink, index) => {
             return (
-              <Link href={navLink.href}>
+              <Link href={navLink.href} key={index}>
                 <motion.li
+                  key={navLink.href}
                   whileHover={{
                     scale: 1.1,
                     color: "#93E1ED",
                     transition: { duration: 0.1 },
                   }}
-                  key={index}
                   className="capitalize text-sm font-black leading-5 tracking-widest text-white font-[MetroReg] cursor-pointer px-10"
                 >
                   {navLink.title}
